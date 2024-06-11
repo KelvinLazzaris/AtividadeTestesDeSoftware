@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Adicionado um "h5" para mostrar uma descrição do produto -->
+    <!-- Adicionado um ",00" aos números para melhorar a experiência do usuário -->
+
+    <div class="ItensEcomm">
+        <div class="products">
+            <div class="product-card" onclick="addItemToCart('Camiseta', 50)">
+                <img src="assets/shirt.webp" alt="Camisa">
+                <h3>Camisa</h3>
+                <h5>(Essa é uma descrição do produto)</h5>
+                <div class="card-red"><p>R$ 50,00</p></div>
+            </div>
+        </div>
+        <div class="products">
+            <div class="product-card" onclick="addItemToCart('Pano de Chão', 99)">
+                <img src="assets/panodechao.webp" alt="Camisa">
+                <h3>Pano de Chão</h3>
+                <h5>(Essa é uma descrição do produto)</h5>
+                <div class="card-red"><p>R$ 99,00</p></div>
+            </div>
+        </div>
+        <div class="products">
+            <div class="product-card" onclick="addItemToCart('Ferro de Passar', 249)">
+                <img src="assets/ferrodepassar.jpg" alt="Camisa">
+                <h3>Ferro de Passar</h3>
+                <h5>(Essa é uma descrição do produto)</h5>
+                <div class="card-red"><p>R$ 249,00</p></div>
+            </div>
+        </div>
+        <div class="products">
+            <div class="product-card" onclick="addItemToCart('Chaleira não Elétrica', 10)"> <!-- Corrigido valor -->
+                <img src="assets/chaleira.webp" alt="Camisa">
+                <h3>Chaleira Não Elétrica</h3>
+                <h5>(Essa é uma descrição do produto)</h5>
+                <div class="card-red"><p>R$ 10,00</p></div>
+            </div>
+        </div>
+        <div class="products">
+            <div class="product-card" onclick="addItemToCart('Banco de Dados', 453)"> <!-- Corrigido valor -->
+                <img src="assets/bancodedados.jpeg" alt="Camisa">
+                <h3>Banco de Dados</h3>
+                <h5>(Essa é uma descrição do produto)</h5>
+                <div class="card-red"><p>R$ 453,00</p></div>
+            </div>
+        </div>     
+    </div>
+
+    <div class="cart"> <!-- Alterado posição do carrinho de compras para "melhorar" a experiência do usuário -->
+        <h2>Carrinho de Compras</h2>
+        <ul id="item-list">
+            <!-- Itens serão adicionados dinamicamente aqui -->
+        </ul>
+        <p>Total: <span id="total">0</span> reais</p> 
+        <button onclick="checkout()">Finalizar Compra</button> 
+        <!-- Adicionado botão para limpar os itens do carrinho -->
+        <button onclick="limparCarrinho()">Limpar Carrinho</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
